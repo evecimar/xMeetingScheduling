@@ -32,6 +32,7 @@ class AgendamentoController extends Controller
             ->with("status")
             ->where("status_id", Status::Ativo)
             ->whereDate('inicio', Carbon::now()->format("Y-m-d"))
+            ->orderBy("inicio", "asc")
             ->get(); 
     }
 }
