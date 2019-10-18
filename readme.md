@@ -17,9 +17,9 @@ Rode do composer install
 
 Rode o docker-composer no arquivo docker-composer.yml da pasta docker;
 
-Rode o php artisam migrate para criar as tabelas;
+Rode o php artisan migrate para criar as tabelas;
 
-Rode o php artisam db:seed para popular o banco com dados iniciais;
+Rode o php artisan db:seed para popular o banco com dados iniciais;
 
 Pronto, as APIs estarão disponível na porta 8000 de sua maquina (localhost:8000)
 
@@ -31,9 +31,9 @@ Configure/crie o arquivo .env na raiz do projeto seguindo o modelo do arquivo .e
 
 Rode do composer install
 
-Rode o php artisam migrate para criar as tabelas;
+Rode o php artisan migrate para criar as tabelas;
 
-Rode o php artisam db:seed para popular o banco com dados iniciais;
+Rode o php artisan db:seed para popular o banco com dados iniciais;
 
 Acesse a pasta public e rode o servidor php (php -S 127.0.0.1:8000);
 
