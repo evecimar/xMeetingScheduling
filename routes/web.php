@@ -11,6 +11,6 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->post('/salas/{sala}/agendar', 'AgendamentoController@agendar');
+$router->post('/agendamentos/{id}/cancelar', 'AgendamentoController@cancelar');
+$router->get('/agendamentos/hoje', 'AgendamentoController@agendamentosDoDia');
