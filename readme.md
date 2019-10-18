@@ -13,13 +13,20 @@ Para rodar o projeto, você tem duas opções:
 ## Utilizando docker
 Configure/crie o arquivo .env na raiz do projeto seguindo o modelo do arquivo .env.exemple
 
-Rode do composer install
+Rode os seguintes comandos na pasta do projeto:
 
-Rode o docker-composer no arquivo docker-composer.yml da pasta docker;
+```sh
+    composer install
+    artisan migrate
+    php artisan db:seed
+```
+Os comandos acima são  respectivamente responsaveis por: instalar as dependencias necessárias, criar as tabelas no banco, popular o banco com dados iniciais.
 
-Rode o php artisan migrate para criar as tabelas;
+Suba o container docker utilizando o docker-composer:
 
-Rode o php artisan db:seed para popular o banco com dados iniciais;
+```sh
+    docker-compose -f docker/docker-compose.yml up -d
+```
 
 Pronto, as APIs estarão disponível na porta 8000 de sua maquina (localhost:8000)
 
@@ -29,13 +36,19 @@ Crie um banco mysql:5.7
 
 Configure/crie o arquivo .env na raiz do projeto seguindo o modelo do arquivo .env.exemple
 
-Rode do composer install
+Rode os seguintes comandos na pasta do projeto:
 
-Rode o php artisan migrate para criar as tabelas;
+```sh
+    composer install
+    artisan migrate
+    php artisan db:seed
+```
+Os comandos acima são  respectivamente responsaveis por: instalar as dependencias necessárias, criar as tabelas no banco, popular o banco com dados iniciais.
 
-Rode o php artisan db:seed para popular o banco com dados iniciais;
-
-Acesse a pasta public e rode o servidor php (php -S 127.0.0.1:8000);
+Acesse a pasta public e rode o servidor php;
+```sh
+    php -S 127.0.0.1:8000
+```
 
 Pronto, as APIs estarão disponível na porta 8000 de sua maquina (localhost:8000)
 
